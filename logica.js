@@ -67,7 +67,6 @@ function abrirModal(pj) {
     pj.status === "Alive" ? "green" : pj.status === "Dead" ? "red" : "gray";
 
   document.getElementById("modal-info").innerHTML = `
-  /*anadir episodios?*/
         <img src="${pj.image}" style="width:100px; border-radius:50%; margin-bottom:10px;">
         <p><strong>Especie:</strong> ${pj.species}</p>
         <p><strong>Estado:</strong> <span style="color:${colorEstado}">● ${pj.status}</span></p>
