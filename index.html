@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick y Morty Guia</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">RICK AND MORTY DB</div>
+      <nav>
+        <div class="search-container">
+          <input
+            type="text"
+            id="buscador"
+            placeholder="Buscar personaje..."
+            onkeyup="buscar()"
+          />
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      </nav>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+      <ul id="menu-lista" class="nav-links">
+        <li><a href="#" onclick="filtrar('todos')">Inicio</a></li>
+        <li class="dropdown" onclick="toggleDropdown()">
+          <a href="#">Categorías ▼</a>
+          <div id="miDropdown" class="dropdown-content">
+            <a href="#" onclick="filtrar('Human')">Humanos</a>
+            <a href="#" onclick="filtrar('Alien')">Aliens</a>
+            <a href="#" onclick="filtrar('todos')">Ver Todos</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>PERSONAJES</h1>
+      <div id="galeria" class="grid-container"></div>
+    </main>
+
+    <div id="miModal" class="modal" onclick="cerrarModal()">
+      <div class="modal-content">
+        <h2 id="modal-nombre">Nombre</h2>
+        <div id="modal-info"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="logica.js"></script>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3 class="logo-footer">R&M DB</h3>
+          <p>Diseño Web Avanzado</p>
+          <p>Curso 2025/26</p>
+        </div>
+        <div class="footer-links">
+          <h3>RECURSOS</h3>
+          <a href="https://rickandmortyapi.com/" target="_blank"
+            >Rick & Morty API</a
+          >
+          <a href="https://github.com/" target="_blank">Repositorio GitHub</a>
+        </div>
+        <div class="footer-Lexi">
+          <h3>DESARROLLO</h3>
+          <p>Lexi Wang Chen</p>
+          <p>Librería: AOS Animation</p>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2026 UDIT - Grado en Diseño Multimedia y Gráfico</p>
+      </div>
+    </footer>
+  </body>
+</html>
